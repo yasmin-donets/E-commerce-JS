@@ -659,7 +659,7 @@ Products Page
 .search-input::placeholder {
   text-transform: capitalize;
 }
-.company-btn {
+.category-btn {
   display: block;
   margin: 0.25em 0;
   padding: 0.25rem;
@@ -671,7 +671,7 @@ Products Page
   cursor: pointer;
   transition: var(--transition);
 }
-.company-btn:hover {
+.category-btn:hover {
   color: var(--clr-grey-3);
 }
 .price-filter {

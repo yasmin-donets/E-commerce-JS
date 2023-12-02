@@ -1,6 +1,6 @@
 import { addToCart } from './cart/setupCart.js';
 
-const display = (products, element) => {
+const display = (products, element, filters) => {
   element.innerHTML = products
     .map((product) => {
       const { id, title, image, price } = product;
@@ -24,12 +24,13 @@ const display = (products, element) => {
         </article>`;
     })
     .join('');
-		element.addEventListener('click', function(e){
-			const parent = e.target.parentElement; 
-			if(parent.classList.contains('product-cart-btn')){
-				addToCart(parent.dataset.id);
-			}
-		})
+  if (filters) return;
+  element.addEventListener('click', function (e) {
+    const parent = e.target.parentElement;
+    if (parent.classList.contains('product-cart-btn')) {
+      addToCart(parent.dataset.id);
+    }
+  });
 };
 
 export default display;
