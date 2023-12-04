@@ -537,7 +537,7 @@ product
 */
 .product-img {
   height: 15rem;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius);
 }
 .product-container {
@@ -695,6 +695,7 @@ Products Page
   }
   .products-container .product-img {
     height: 10rem;
+    object-fit: contain;
   }
   .products-container .product-name {
     font-size: 0.85rem;
@@ -711,7 +712,7 @@ Products Page
 .filter-error {
   position: absolute;
   top: 5rem;
-  left: 0;
+  left: 5rem;
   width: 100%;
   text-align: center;
   margin-top: 4rem;
