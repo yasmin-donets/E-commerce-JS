@@ -32,7 +32,6 @@ const setupPrice = (store) => {
       products.innerHTML = `<h3 class="filter-error">Sorry, no products matched your search</h3>`;
     }
   });
-	console.log(priceInput.value);
 };
 
 

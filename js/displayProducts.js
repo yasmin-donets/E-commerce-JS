@@ -5,7 +5,7 @@ const display = (products, element, filters) => {
     .map((product) => {
       const { id, title, image, price } = product;
       return `<article class="product">
-          <div class="product-container">
+          <div class="product-container" data-id="${id}">
             <img src="${image}" class="product-img img" alt="" />
            
             <div class="product-icons">

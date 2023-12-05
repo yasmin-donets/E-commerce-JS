@@ -743,7 +743,7 @@ Single Product Page
 .single-product-img {
   height: 25rem;
   border-radius: var(--radius);
-  object-fit: cover;
+  object-fit: contain;
 }
 .single-product-company {
   font-size: 1.2rem;
@@ -757,14 +757,45 @@ Single Product Page
   font-size: 1.25rem;
   font-weight: 500;
 }
+.rating {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 24px;
+  color: var(--clr-primary-7);
+  margin-bottom: 10px;
+}
 
-.product-color {
+.rating span {
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: #222;
-  margin: 0.5rem 0.5rem 1.5rem 0;
+  position: relative;
+  width: 1.1em;
+}
+
+.rating span::before {
+  content: '★';
+  position: absolute;
+  opacity: 0.5;
+}
+
+.rating span:hover::before,
+.rating span:hover ~ span::before {
+  opacity: 1;
+}
+.rated-count {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.single-product-price {
+  font-size: 1.2em;
+  color: #27ae60;
+  margin-bottom: 5px;
 }
 
 .single-product-desc {

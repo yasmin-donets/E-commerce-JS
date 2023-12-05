@@ -1,5 +1,5 @@
 const allProductsUrl = 'https://fakestoreapi.com/products';
-const singleProductUrl = 'https://fakestoreapi.com/products/1';
+const singleProductUrl = 'https://fakestoreapi.com/products/';
 const getElement = (selection) => {
   const element = document.querySelector(selection);
   if (element) return element;
