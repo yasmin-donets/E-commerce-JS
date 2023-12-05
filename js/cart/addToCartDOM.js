@@ -1,17 +1,17 @@
 import { getElement } from '../utils.js';
-
 const cartItemsDOM = getElement('.cart-items');
 const addToCartDOM = ({ id, title, price, image, amount }) => {
   const article = document.createElement('article');
   article.classList.add('cart-item');
   article.setAttribute('data-id', id);
-  article.innerHTML = ` <img src="${image}"
+  article.innerHTML = `
+    <img src="${image}"
               class="cart-item-img"
               alt="${title}"
             />  
             <div>
               <h4 class="cart-item-name">${title}</h4>
-              <p class="cart-item-price">${price}</p>
+              <p class="cart-item-price">${price.toFixed(2)}</p>
               <button class="cart-item-remove-btn" data-id="${id}">remove</button>
             </div>
           
@@ -23,7 +23,9 @@ const addToCartDOM = ({ id, title, price, image, amount }) => {
               <button class="cart-item-decrease-btn" data-id="${id}">
                 <i class="fas fa-chevron-down"></i>
               </button>
-            </div>`;
-		cartItemsDOM.appendChild(article);
+            </div>
+  `;
+  cartItemsDOM.appendChild(article);
 };
+
 export default addToCartDOM;
