@@ -20,7 +20,7 @@ export const addToCart = (id) => {
     const amount = increaseAmount(id);
     const items = [...cartItemsDOM.querySelectorAll('.cart-item-amount')];
     const newAmount = items.find((value) => value.dataset.id === id);
-    //newAmount.textContent = amount;
+    newAmount.textContent = amount;
     console.log(items);
     console.log(cart);
   }
