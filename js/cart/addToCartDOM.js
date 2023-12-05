@@ -11,7 +11,7 @@ const addToCartDOM = ({ id, title, price, image, amount }) => {
             />  
             <div>
               <h4 class="cart-item-name">${title}</h4>
-              <p class="cart-item-price">${price.toFixed(2)}</p>
+              <p class="cart-item-price">${price}</p>
               <button class="cart-item-remove-btn" data-id="${id}">remove</button>
             </div>
           

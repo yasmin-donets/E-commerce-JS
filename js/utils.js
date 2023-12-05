@@ -1,5 +1,6 @@
 const allProductsUrl = 'https://fakestoreapi.com/products';
 const singleProductUrl = 'https://fakestoreapi.com/products/';
+
 const getElement = (selection) => {
   const element = document.querySelector(selection);
   if (element) return element;
@@ -8,7 +9,6 @@ const getElement = (selection) => {
   );
 };
 
-const formatPrice = () => {};
 
 const getStorageItem = (item) => {
   let storageItem = localStorage.getItem(item);
@@ -27,7 +27,6 @@ export {
   allProductsUrl,
   singleProductUrl,
   getElement,
-  formatPrice,
   getStorageItem,
   setStorageItem,
 };
