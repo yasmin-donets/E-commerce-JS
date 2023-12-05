@@ -33,10 +33,9 @@ window.addEventListener('DOMContentLoaded', async function () {
   try {
 		const fullUrl = `${singleProductUrl}${urlID}`;
     const response = await fetch(fullUrl);
-		console.log(fullUrl);
     if (response.status >= 200 && response.status <= 299) {
       const product = await response.json();
-      console.log(product);
+      
       // grab data
       const { id, title, category, description, image, price, rating } =
         product;

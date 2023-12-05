@@ -1,6 +1,7 @@
 import { addToCart } from './cart/setupCart.js';
 
 const display = (products, element, filters) => {
+  
   element.innerHTML = products
     .map((product) => {
       const { id, title, image, price } = product;
@@ -28,7 +29,8 @@ const display = (products, element, filters) => {
   element.addEventListener('click', function (e) {
     const parent = e.target.parentElement;
     if (parent.classList.contains('product-cart-btn')) {
-      addToCart(parent.dataset.id);
+      let productID = parseInt(parent.dataset.id);
+      addToCart(productID);
     }
   });
 };
