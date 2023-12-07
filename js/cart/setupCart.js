@@ -78,10 +78,10 @@ function displayCartItemCount() {
 
 //calculate total price for pay
 function displayCartTotal() {
-  let total = cart.reduce((total, cartItem) => {
+  let total = cart.reduce((total, cartItem) => {    
     return (total += cartItem.price * cartItem.amount);
   }, 0);
-  cartTotalDOM.textContent = `Total : $${total}`;
+  cartTotalDOM.textContent = `Total : $${(total).toFixed(1)}`;
 }
 
 // dosplay all cart items
